@@ -19,6 +19,9 @@ spec:
       containers:
         - name: pal-tracker-container
           image: eshih159/pal-tracker:v3
+          resources:
+            limits:
+              cpu: "100m"
           livenessProbe:
             httpGet:
               path: /actuator/health/liveness
