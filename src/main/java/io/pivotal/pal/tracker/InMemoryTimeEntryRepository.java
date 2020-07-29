@@ -27,6 +27,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     @Override
     public TimeEntry update(long id, TimeEntry timeEntry) {
+        timeEntry.setId(id);
         timeEntryMap.replace(id, timeEntry);
         return timeEntryMap.get(id);
     }
