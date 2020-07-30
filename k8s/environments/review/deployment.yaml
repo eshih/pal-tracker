@@ -8,3 +8,6 @@ spec:
       containers:
         - name: pal-tracker-container
           image: eshih159/pal-tracker:build-github.run_number
+          env:
+          - name: SPRING_DATASOURCE_HIKARI_MAXIMUMPOOLSIZE
+            value: "1"
